@@ -1,10 +1,28 @@
 import React, { useState } from "react";
-import { Route, Link } from "react-router-dom";
+import { Route, Link, Switch } from "react-router-dom";
 
 import Home from "./Components/Home";
 import  OrderForm from "./Components/OrderForm";
 
+const initialFormValues = {
+  name: '',
+  size: '',
+  sauce: '',
+  pepperoni: false,
+  sausage: false,
+  chicken: false,
+  tomatoes: false,
+  olives: false,
+  pineapple: false,
+  onions: false,
+  spinach: false,
+  special: ''
+}
+
+
 const App = () => {
+  const [formValues, setFormValues] = useState(initialFormValues)
+
   return (
     <>
       <nav>
@@ -12,20 +30,17 @@ const App = () => {
         <div className='nav-links'>
           {/* 👉 STEP 3 - Make Links to navigate us Home (`/`) and Shop (`/items-list`) */}
           <Link to="/" id="order-pizza"><button>Home</button></Link>
-          <Link to="/pizza"><button>Order</button></Link>
+          <Link to="/pizza" id="order-pizza"><button>Order</button></Link>
         </div>
       </nav>
-      
-      <Route path={"/pizza"}>
-          <OrderForm />
-      </Route>
+      <Switch>
+        <Route path="/pizza">
+            <OrderForm values={formValues}/>
+        </Route>  
         <Route path="/">
-          <Home />
+            <Home />
         </Route>
-      
-      {/* <Switch>
-        
-      </Switch> */}
+      </Switch> 
     </>
   );
 };
