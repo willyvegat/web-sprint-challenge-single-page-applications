@@ -87,8 +87,8 @@ export default function OrderForm(props) {
         </label>
 
         <label>
-          <h3>Choice of sauce</h3>
-          <p>Choose up to 5.</p>
+          <h3>Choice of Toppings</h3>
+          <p>Choose up to 8.</p>
           <input 
             type="checkbox"
             name="pepperoni"
@@ -163,16 +163,10 @@ export default function OrderForm(props) {
             placeholder="Anything else you'd like to add?"
             id="special-text"
           />
-        </label>
+        </label><br/>
+
+        <button id="order-button">Order</button>
     </form>
     </div>
   )
 }
-
-/**
- *  
-  olives: false,
-  pineapple: false,
-  onions: false,
-  spinach:
- */
