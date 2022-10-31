@@ -92,6 +92,7 @@ const App = () => {
               values={formValues}
               change={inputChange}
               submit={orderSubmit}
+              errors={formErrors}
             />
         </Route>  
         <Route path="/">
