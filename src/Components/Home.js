@@ -11,13 +11,13 @@ export default function Home() {
   return (
     <div className='home-wrapper'>
       <img
-        className='home-image'
+        className='pizza-image'
         src='https://vendify-demos.astoundify.com/tasti/wp-content/uploads/sites/4/2020/12/top-view-pepperoni-pizza-sliced-into-six-slices-1536x1024.jpg'
-        alt=''
+        alt='pizza'
       />
       <button
+        id='order-pizza'
         onClick={routeToOrder}
-        className='md-button order-button'
       >
         Order now!
       </button>

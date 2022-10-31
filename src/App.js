@@ -26,7 +26,7 @@ const initialFormValues = {
 const initialFormErrors = {
   name: '',
   size: '',
-  sauce: '',
+  sauce: ''
 }
 
 const initialOrders = [];
@@ -82,7 +82,7 @@ const App = () => {
       <nav>
       <h1>Bloomtech Eats</h1>
         <div className='nav-links'>
-          <Link to="/" id="order-pizza"><button>Home</button></Link>
+          <Link to="/"><button>Home</button></Link>
           <Link to="/pizza"><button>Order</button></Link>
         </div>
       </nav>
