@@ -18,9 +18,11 @@ export default function OrderForm(props) {
     <div>
       <form id='pizza-form' onSubmit={onSubmit}>
         <h2>Build Your Own Pizza</h2>
-        <p>{errors.name}</p>
-        <p>{errors.size}</p>
-        <p>{errors.sauce}</p>
+        <div className='errors'>
+          <p>{errors.name}</p>
+          <p>{errors.size}</p>
+          <p>{errors.sauce}</p>
+        </div>
         <label>
           <h3>Name:</h3>
           <input
